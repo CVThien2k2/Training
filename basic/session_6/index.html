@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="d-flex vh-100 justify-content-center align-items-center">
+        <button id="btnStart" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Login
+        </button>
+        <div id="alert" class="alert alert-success alert-dismissible fade position-absolute bottom-0 end-0 me-3"
+            style="z-index: 2000;" role="alert">
+            <strong>Thành công !</strong> Đăng nhập bằng mật khẩu mới
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="modal fade" id="loginModal" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content">
+                    <div class="d-flex p-3">
+                        <div class="w-100 text-center fs-5 modal-title" id="loginModalLabel">Member Login</div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form>
+                        <div class="modal-body d-flex flex-column">
+                            <div class="mb-4 position-relative">
+                                <i class="fa-solid fa-lock icon-input position-absolute ms-3 mt-2"></i>
+                                <input type="text" class="form-control ps-5 required" id="usernameControlInput"
+                                    placeholder="Username">
+                                <div id="usernameError" class="invalid-feedback">
+                                    Bắt buộc nhập.
+                                </div>
+                            </div>
+                            <div class="mb-4 position-relative">
+                                <i class="fa-solid fa-lock icon-input position-absolute ms-3 mt-2"></i>
+                                <input type="password" class="form-control ps-5 required" id="passwordControlInput"
+                                    placeholder="Password">
+                                <div id="passwdError" class="invalid-feedback">
+                                    Bắt buộc nhập.
+                                </div>
+                            </div>
+                            <button id="btnLogin" type="button" class="btn btn-success flex-grow-1">Login</button>
+                        </div>
+                        <div class="d-flex justify-content-center p-3 bg-secondary rounded-bottom opacity-75">
+                            <div id="forgotPassword" data-bs-toggle="modal" data-bs-target="#forgotModal">Forgot
+                                password?</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="forgotModal" aria-labelledby="forgotModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content">
+                    <div class="d-flex p-3">
+                        <div class="w-100 text-center fs-5 modal-title" id="forgotModalLabel">Forgot Password?</div>
+                        <button type="button" class="btn-close" data-bs-toggle="modal"
+                            data-bs-target="#loginModal"></button>
+                    </div>
+                    <form>
+                        <div class="modal-body d-flex flex-column">
+                            <div class="mb-4 position-relative">
+                                <i class="fa-solid fa-lock icon-input position-absolute ms-3 mt-2"></i>
+                                <input type="password" class="form-control ps-5 required" id="oldPasswordControlInput"
+                                    placeholder="OldPassword">
+                                <div id="oldPasswordError" class="invalid-feedback">
+                                    Bắt buộc nhập.
+                                </div>
+                            </div>
+                            <div class="mb-4 position-relative">
+                                <i class="fa-solid fa-lock icon-input position-absolute ms-3 mt-2"></i>
+                                <input type="password" class="form-control ps-5 required" id="newPasswordControlInput"
+                                    placeholder="NewPassword">
+                                <div id="newPasswordError" class="invalid-feedback">
+                                    Bắt buộc nhập.
+                                </div>
+                            </div>
+                            <button id="btnSave" type="button" class="btn btn-success flex-grow-1">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

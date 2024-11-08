@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 5px;
+        }
+        .box-inline {
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            border: 1px solid red;
+            position: relative;
+        }
+        .box-inline:nth-child(even) {
+            background-color: green;
+        }
+        .box-inline:nth-child(odd) {
+            background-color: red;
+        }
+        @media only screen and (min-width: 320px) {
+            .box-inline:nth-child(even) {
+            background-color: green;
+            width: 30px;
+        }
+        .box-inline:nth-child(odd) {
+            width: 20px;
+            background-color: red;
+        }
+        }
+        @media only screen and (min-width: 425px) {
+            .box-inline:nth-child(even) {
+                background-color: red;
+                width: 50px;
+            }
+            .box-inline:nth-child(odd) {
+                width: 20px;
+                background-color: yellow;
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            .box-inline:nth-child(even) {
+                background-color: yellow;
+                width: 40px;
+            }
+            .box-inline:nth-child(odd) {
+                width: 30px;
+                background-color: brown;
+            }
+        }
+        @media only screen and (min-width: 992px) {
+            .box-inline:nth-child(even) {
+                background-color: violet;
+                width: 40px;
+            }
+            .box-inline:nth-child(odd) {
+                width: 30px;
+                background-color: yellow;
+            }
+        }
+        @media only screen and (min-width: 1200px) {
+            .box-inline:nth-child(even) {
+                background-color: pink;
+                width: 100px;
+            }
+            .box-inline:nth-child(odd) {
+                width: 50px;
+                background-color: violet;
+            }
+        }
+
+    </style>
+</head> 
+<body>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+        <span class="box-inline box-I"><span class="name-item"></span></span>
+</html>

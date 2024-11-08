@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="overlay"></div>
+      <button id="btnLogin" class="button">
+        Đăng nhập <i class="fa-solid fa-right-to-bracket icon-right"></i>
+      </button>
+      <div id="modal" class="modal">
+        <i id="btnClose" class="fa-solid fa-xmark icon-close button-close"></i>
+        <div class="modal-content">
+          <span class="text-title">Member Login</span>
+          <form>
+            <div class="input-field">
+              <i class="fa-solid fa-user icon-input"></i>
+              <input
+                class="input-text"
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Username"
+              />
+            </div>
+            <div class="input-field">
+              <i class="fa-solid fa-lock icon-input"></i>
+              <input
+                class="input-text"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+
+            <input id="btnSubmit" class="button" type="button" value="Login" />
+          </form>
+        </div>
+        <div class="modal-footer">
+          <span class="text-footer">Forgot Password?</span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

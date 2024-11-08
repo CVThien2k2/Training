@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box; /*Cho border của các box chiếm content bên trong chứ k lộ ra ngoài*/
+      }
+      *,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .box-A1 {
+        width: 1000px;
+        height: 2000px;
+        border: 5px solid red;
+      }
+
+      .box-A2 {
+        width: 300px;
+        height: 100px;
+        border: 5px solid brown;
+        position: fixed; /*Cho dính trên màn hình*/
+        top: 0;
+        left: 0;
+      }
+      .box-A3 {
+        width: 300px;
+        height: 100px;
+        border: 5px solid orange;
+        position: fixed;/*Cho dính trên màn hình*/
+        bottom: 0;
+        left: 0;
+      }
+      .box-A4 {
+        width: 700px;
+        height: 600px;
+        border: 5px solid blue;
+        position: absolute; /* đinh nghĩa theo cha có position != static*/
+        top: 100px;
+      }
+      .box-A5 {
+        width: 400px;
+        height: 200px;
+        border: 5px solid rgb(128, 0, 128);
+        left: 200px;
+        position: sticky;  /* Cố định khi trượt*/
+        top: 300px;
+        z-index: 1;
+      }
+      .box-A6 {
+        width: 190px;
+        height: 100px;
+        border: 5px solid yellow;
+        position: sticky;
+        top: 300px;
+        margin: 0 auto; /*Căn giữa*/
+      }
+      @media only screen and (max-width: 780px) {
+        .box-A1 {
+          width: 500px;
+        }
+        .box-A2 {
+          width: 150px;
+        }
+        .box-A3 {
+          width: 150px;
+        }
+        .box-A4 {
+          width: 350px;
+        }
+        .box-A5 {
+          width: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-A1">A1</div>
+    <div class="box-A2">A2</div>
+    <div class="box-A3">A3</div>
+    <div class="box-A4">
+      <div class="box-A5">A5 <div class="box-A6">A6</div></div>
+    </div>
+  </body>
+</html>

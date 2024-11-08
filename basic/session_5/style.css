@@ -1,0 +1,115 @@
+:root {
+    --green: #04AA6D;
+    --text-xl: 20px;
+}
+body{
+    font-family: 'Roboto, sans-serif';
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.button{
+    background-color: var(--green);
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    border-radius: 2px;
+    text-align: center;
+    font: var(--text-md) sans-serif;
+}
+.button:active{
+    transform: scale(1.01) translateY(5px);
+    transition: 0.5s;
+}
+.button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.icon-right{
+    margin-left: 5px;
+    transform: scale(1.5);
+}
+
+.modal{
+    width: 400px;
+    height: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 3;
+    background-color: #fff;
+}
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    flex: 1;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.text-title{
+    font-size: var(--text-xxl);
+    text-align: center;
+    margin: 20px 0px;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.icon-input{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%) scale(1.1);
+    left: 10px;
+}
+
+input[type="text"], input[type="password"]{
+    padding: 10px 10px 10px 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.modal-footer{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(212, 210, 207);
+    border-radius: 0 0 10px 10px;
+}
+.text-footer{
+    opacity: 0.5;
+}
+.button-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#overlay {
+    position: fixed; 
+    display: none; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 2; 
+    cursor: pointer; 
+}
