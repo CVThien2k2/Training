@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("bai2.jpg");
+    background-repeat:  no-repeat;
+    background-size: cover;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px
+}
+.overplay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 3;
+}
+.content__title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 10px;
+    text-align: center;
+}
+.content__description{
+    word-wrap: break-word;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+}
+.content__option{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.button {
+    min-height: 50px;
+    color: white;
+    background-color: red;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
